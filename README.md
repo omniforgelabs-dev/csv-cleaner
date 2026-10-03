@@ -1,8 +1,20 @@
 # csv-cleaner (`dataclean`)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![Tests: 16 passing](https://img.shields.io/badge/tests-16%20passing-brightgreen.svg)](#tests)
+[![Dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](#install)
+
 **A dependency-free Python CLI that turns a messy CSV into a clean CSV plus a machine-readable JSON data-quality report.**
 
 No install, no `pip`, no network, no credentials, no config files. Standard library only, Python 3.11+.
+
+```sh
+python -m dataclean clean messy.csv --out clean.csv --report report.json
+# clean: 5 rows in, 4 rows out, 1 duplicate(s) removed, 4 missing value(s), 0 filled
+```
+
+**What it fixes:** inconsistent header casing, stray whitespace, `N/A` / `null` / `-` standing in for blanks, duplicated rows — and it tells you exactly how many values were missing, per column, in JSON you can log or diff.
 
 ---
 
@@ -15,7 +27,7 @@ Spreadsheet exports are messy: inconsistent header casing, stray whitespace, `N/
 Nothing to install. Clone the repo and run it from the repository root:
 
 ```sh
-git clone <your-repo-url> csv-cleaner
+git clone https://github.com/omniforgelabs-dev/csv-cleaner.git
 cd csv-cleaner
 python3 --version   # must be 3.11 or newer
 ```
