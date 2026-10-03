@@ -1,0 +1,9 @@
+[project]
+name = "dataclean"
+version = "1.0.0"
+description = "Dependency-free CSV cleaner and data-quality reporter"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+dataclean = "dataclean.cli:main"
