@@ -4,13 +4,15 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
 [![Tests: 16 passing](https://img.shields.io/badge/tests-16%20passing-brightgreen.svg)](#tests)
 [![Dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](#install)
+[![PyPI](https://img.shields.io/badge/pypi-dataclean--csv-blue.svg)](https://pypi.org/project/dataclean-csv/)
 
 **A dependency-free Python CLI that turns a messy CSV into a clean CSV plus a machine-readable JSON data-quality report.**
 
-No install, no `pip`, no network, no credentials, no config files. Standard library only, Python 3.11+.
+No dependencies, no network, no credentials, no config files. Standard library only, Python 3.11+.
 
 ```sh
-python -m dataclean clean messy.csv --out clean.csv --report report.json
+pip install dataclean-csv
+dataclean clean messy.csv --out clean.csv --report report.json
 # clean: 5 rows in, 4 rows out, 1 duplicate(s) removed, 4 missing value(s), 0 filled
 ```
 
@@ -24,6 +26,17 @@ Spreadsheet exports are messy: inconsistent header casing, stray whitespace, `N/
 
 ## Install
 
+### From PyPI (recommended)
+
+```sh
+pip install dataclean-csv
+dataclean --version
+```
+
+The distribution is named `dataclean-csv`; the import package and the console command are both `dataclean`.
+
+### From source (zero install)
+
 Nothing to install. Clone the repo and run it from the repository root:
 
 ```sh
@@ -32,7 +45,7 @@ cd csv-cleaner
 python3 --version   # must be 3.11 or newer
 ```
 
-Optionally install the `dataclean` console script:
+Optionally install the `dataclean` console script from the checkout:
 
 ```sh
 pip install -e .

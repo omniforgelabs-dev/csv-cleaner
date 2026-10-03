@@ -13,6 +13,16 @@ Nothing yet.
 
 First public release.
 
+### Packaging
+
+- Published to PyPI as **`dataclean-csv`** — `pip install dataclean-csv`.
+  The distribution name is `dataclean-csv` (the plain name `dataclean` was already
+  taken on PyPI by an unrelated project); the import package and the console
+  command remain `dataclean`.
+- Added PEP 621 `pyproject.toml` metadata (setuptools backend), a `MANIFEST.in`,
+  and a `dataclean` console-script entry point.
+- Both an sdist and a pure-Python wheel are built and published.
+
 ### Added
 
 - `dataclean clean` — reads a CSV, normalizes it, and writes a cleaned CSV plus a JSON

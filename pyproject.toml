@@ -1,9 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "dataclean"
+name = "dataclean-csv"
 version = "1.0.0"
-description = "Dependency-free CSV cleaner and data-quality reporter"
+description = "Dependency-free CSV cleaner and data-quality reporter: normalize headers, drop duplicate rows, fill blanks, and emit a machine-readable JSON report. Standard library only."
+readme = "README.md"
 requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "omniforgelabs-dev" }]
+keywords = [
+    "csv",
+    "csv-cleaner",
+    "data-cleaning",
+    "data-quality",
+    "data-wrangling",
+    "data-profiling",
+    "etl",
+    "cli",
+    "command-line-tool",
+    "stdlib",
+    "no-dependencies",
+    "pandas-alternative",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
 dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1.0", "twine>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/omniforgelabs-dev/csv-cleaner"
+Repository = "https://github.com/omniforgelabs-dev/csv-cleaner"
+Issues = "https://github.com/omniforgelabs-dev/csv-cleaner/issues"
+Changelog = "https://github.com/omniforgelabs-dev/csv-cleaner/blob/main/CHANGELOG.md"
+Documentation = "https://static.teamily.ai/sites/0f6bd1fe-4aec-46c8-b7bd-7ae7910d0ded/webpages/csv-cleaner-guide/index.html"
 
 [project.scripts]
 dataclean = "dataclean.cli:main"
+
+[tool.setuptools]
+packages = ["dataclean"]
+include-package-data = false
